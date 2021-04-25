@@ -1,0 +1,76 @@
+.formContainer {
+  max-width: 1080px;
+  margin: 4rem auto;
+  padding: 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+
+  .formInfo {
+    .logo {
+      width: 12rem;
+    }
+    h1 {
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      padding-right: 5rem;
+      color: var(--text-primary);
+    }
+
+    button {
+      margin-top: 5rem;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        margin-left: 1rem;
+      }
+    }
+  }
+  .formInputs {
+    input {
+      width: 100%;
+
+      margin: 0.25rem 0;
+
+      height: 3rem;
+
+      border: 0;
+      border-radius: 0.25rem;
+
+      &::placeholder {
+        color: var(--text-secondary);
+
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
+    }
+    div {
+      display: flex;
+      input:first-child {
+        margin-right: 0.25rem;
+      }
+      input:last-child {
+        width: 20%;
+      }
+    }
+    button {
+      border: 0;
+      font-size: 1rem;
+
+      margin-top: 1rem;
+      background: var(--red);
+      color: var(--background);
+
+      height: 3rem;
+      width: 100%;
+      border-radius: 0.25rem;
+    }
+  }
+}

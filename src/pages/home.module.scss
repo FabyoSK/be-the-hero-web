@@ -26,6 +26,7 @@
       border-radius: 0.25rem;
 
       &::placeholder {
+        color: var(--text-secondary);
         font-size: 1rem;
         padding-left: 0.5rem;
       }

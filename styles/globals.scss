@@ -33,12 +33,13 @@ body,
 input,
 textarea,
 button {
-  font: 500 1rem Roboto, sans-serif;
+  font: 400 1rem "Roboto", sans-serif;
   color: var(--gray-500);
 }
 h1 {
   color: var(--title-primary);
   font-size: 2rem;
+  font-weight: 500;
 }
 
 h2 {
