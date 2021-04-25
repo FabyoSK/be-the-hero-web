@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem 0;
+
+  .logoContainer {
+    img {
+      width: 8rem;
+      margin-right: 2rem;
+    }
+    display: flex;
+    align-items: center;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+  }
+  .buttonAdd {
+    border: 0;
+    font-size: 1rem;
+
+    margin-top: 1rem;
+    margin-right: 1rem;
+    background: var(--red);
+    color: var(--background);
+
+    height: 3rem;
+    width: 100%;
+    padding: 0 2rem;
+    border-radius: 0.25rem;
+  }
+  .buttonLogout {
+    border: 0;
+
+    margin-top: 1rem;
+    color: var(--background);
+
+    height: 3rem;
+    width: 3rem;
+
+    border-radius: 0.25rem;
+
+    border: 1.5px solid #dcdce6;
+
+    img {
+      width: 1rem;
+    }
+  }
+}
