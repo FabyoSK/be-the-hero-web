@@ -1,0 +1,52 @@
+.homeContainer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 5rem 0;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  .logo {
+    width: 12rem;
+
+    padding-bottom: 6rem;
+  }
+  .loginContainer {
+    h1 {
+      margin: 1rem 0;
+    }
+    input {
+      width: 100%;
+
+      margin: 1rem 0;
+
+      height: 3rem;
+
+      border: 0;
+      border-radius: 0.25rem;
+
+      &::placeholder {
+        font-size: 1rem;
+        padding-left: 0.5rem;
+      }
+    }
+
+    button {
+      border: 0;
+      font-size: 1rem;
+
+      background: var(--red);
+      color: var(--background);
+
+      height: 3rem;
+      width: 100%;
+      border-radius: 0.25rem;
+    }
+  }
+  .peopleContainer {
+    margin-left: 10rem;
+    img {
+      width: 36rem;
+    }
+  }
+}
