@@ -34,7 +34,8 @@
     }
   }
   .formInputs {
-    input {
+    input,
+    textarea {
       width: 100%;
 
       margin: 0.25rem 0;
@@ -48,29 +49,30 @@
         color: var(--text-secondary);
 
         font-size: 1rem;
-        padding-left: 1rem;
+        padding: 1rem;
       }
     }
-    div {
-      display: flex;
-      input:first-child {
-        margin-right: 0.25rem;
-      }
-      input:last-child {
-        width: 20%;
-      }
+    textarea {
+      height: 8rem;
+      min-height: 4rem;
+      outline: 0;
+      resize: vertical;
     }
+
     button {
-      border: 0;
       font-size: 1rem;
 
       margin-top: 1rem;
-      background: var(--red);
-      color: var(--background);
-
+      border: 1.5px solid #dcdce6;
       height: 3rem;
       width: 100%;
       border-radius: 0.25rem;
+
+      &[type="submit"] {
+        border: 0;
+        color: var(--background);
+        background: var(--red);
+      }
     }
   }
 }

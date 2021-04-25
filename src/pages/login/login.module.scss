@@ -1,0 +1,9 @@
+.cityInput {
+  display: flex;
+  input:first-child {
+    margin-right: 0.25rem;
+  }
+  input:last-child {
+    width: 20%;
+  }
+}

@@ -1,5 +1,7 @@
 import { FormContainer } from "../../components/FormContainer";
 
+import styles from "./login.module.scss";
+
 export default function Login() {
   return (
     <FormContainer
@@ -13,11 +15,11 @@ export default function Login() {
       <input type="text" placeholder="Nome da ONG" />
       <input type="text" placeholder="E-mail" />
       <input type="text" placeholder="WhatsApp" />
-      <div>
+      <div className={styles.cityInput}>
         <input type="text" placeholder="Cidade" />
         <input type="text" placeholder="UF" />
       </div>
-      <button>Cadastrar</button>
+      <button type="submit">Cadastrar</button>
     </FormContainer>
   );
 }

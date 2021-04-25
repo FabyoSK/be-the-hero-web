@@ -1,0 +1,15 @@
+.card {
+  background: #ffffff;
+
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+
+  .cardSection {
+    margin-bottom: 2rem;
+
+    h2 {
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+  }
+}

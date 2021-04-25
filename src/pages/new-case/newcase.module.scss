@@ -1,0 +1,8 @@
+.buttons {
+  display: flex;
+
+  button[type="submit"] {
+    padding: 0 4rem;
+    margin-left: 1rem;
+  }
+}
