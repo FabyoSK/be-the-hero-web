@@ -5,14 +5,7 @@ export function Feed() {
   return (
     <div>
       <h1>Casos cadastrados</h1>
-      <div className={styles.cardContainer}>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
+      <div className={styles.cardContainer}></div>
     </div>
   );
 }

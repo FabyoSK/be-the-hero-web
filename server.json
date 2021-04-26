@@ -8,51 +8,28 @@
   ],
   "organizations": [
     {
-      "name": "fSa",
-      "email": "asa",
+      "id": "fsk",
+      "name": "fsk",
+      "email": "help@fsk.org",
       "whatsApp": "saa",
-      "city": "ass",
+      "city": "Praia",
+      "uf": "PR"
+    },
+    {
+      "id": 0.4142760318673262,
+      "name": "fsk",
+      "email": "",
+      "whatsApp": "",
+      "city": "",
       "uf": ""
     },
     {
-      "id": 1,
-      "name": "FSK",
-      "email": "asf",
-      "whatsApp": "2131231",
-      "city": "sad",
+      "id": 0.4629018643946188,
+      "name": "fsk",
+      "email": "",
+      "whatsApp": "",
+      "city": "",
       "uf": ""
-    },
-    {
-      "id": 0.6826204742636517,
-      "name": "FSK",
-      "email": "asf",
-      "whatsApp": "2131231",
-      "city": "sad",
-      "uf": "ss"
-    },
-    {
-      "id": 0.6916990148532185,
-      "name": "FSK",
-      "email": "asf",
-      "whatsApp": "2131231",
-      "city": "sad",
-      "uf": "ss"
-    },
-    {
-      "id": 0.4718436482829269,
-      "name": "FSK",
-      "email": "asf",
-      "whatsApp": "2131231",
-      "city": "sad",
-      "uf": "ss"
-    },
-    {
-      "id": 0.018041467890102858,
-      "name": "FSK",
-      "email": "asf",
-      "whatsApp": "2131231",
-      "city": "sad",
-      "uf": "ss"
     }
   ]
 }

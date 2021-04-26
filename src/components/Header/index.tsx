@@ -1,11 +1,14 @@
 import styles from "./header.module.scss";
 
-export function Header() {
+interface HeaderProps {
+  organizationName: string;
+}
+export function Header({ organizationName }: HeaderProps) {
   return (
     <div className={styles.header}>
       <div className={styles.logoContainer}>
         <img src="./logo.png" alt="logo" />
-        <p>Bem vinda, APAD</p>
+        <p>Bem vinda, {organizationName}</p>
       </div>
       <div className={styles.buttons}>
         <button className={styles.buttonAdd}>Cadastrar novo caso</button>

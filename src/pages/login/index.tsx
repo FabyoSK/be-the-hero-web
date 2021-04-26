@@ -1,4 +1,6 @@
 import { FormEvent, useState } from "react";
+import { useRouter } from "next/router";
+
 import { FormContainer } from "../../components/FormContainer";
 import { api } from "../../services/api";
 
@@ -10,6 +12,8 @@ export default function Login() {
   const [whatsApp, setWhatsApp] = useState("");
   const [city, setCity] = useState("");
   const [uf, setUf] = useState("");
+
+  const router = useRouter();
 
   async function handleFormSubmit(e: FormEvent) {
     e.preventDefault();
@@ -23,7 +27,7 @@ export default function Login() {
       uf,
     });
 
-    console.log(response.data);
+    router.push(`/organization/${name}`);
   }
   return (
     <FormContainer
