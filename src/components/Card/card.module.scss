@@ -1,8 +1,17 @@
 .card {
   background: #ffffff;
-
+  position: relative;
   padding: 1.5rem;
   border-radius: 0.5rem;
+
+  button {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+
+    border: 0;
+    background: transparent;
+  }
 
   .cardSection {
     margin-bottom: 2rem;

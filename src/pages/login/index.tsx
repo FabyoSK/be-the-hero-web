@@ -11,6 +11,7 @@ export default function Login() {
        ajude pessoas a encontrarem
        os casos da sua ONG."
       backPage="login"
+      backPageURL="/"
     >
       <input type="text" placeholder="Nome da ONG" />
       <input type="text" placeholder="E-mail" />

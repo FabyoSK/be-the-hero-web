@@ -9,6 +9,7 @@ export default function NewCase() {
       body="Descreva o caso detalhadamente para 
       encontrar um herói para resolver isso."
       backPage="home"
+      backPageURL="/list"
     >
       <input type="text" placeholder="Título do caso" />
       <textarea placeholder="Descrição" />

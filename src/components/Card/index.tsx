@@ -3,6 +3,9 @@ import styles from "./card.module.scss";
 export function Card() {
   return (
     <div className={styles.card}>
+      <button type="button">
+        <img src="./trash.png" alt="Deletar" />
+      </button>
       <div className={styles.cardSection}>
         <h2>Caso:</h2>
         <p>Cadelinha atropelada</p>
