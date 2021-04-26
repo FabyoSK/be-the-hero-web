@@ -20,7 +20,7 @@ interface CaseContextProps {
   cases: Case[];
   handleLogin: () => void;
   handleCreateOrganization: () => void;
-  handleCreateCase: () => void;
+  handleCreateCase: (c: Case) => void;
 }
 export const CaseContext = createContext({} as CaseContextProps);
 
@@ -29,7 +29,9 @@ export function CaseContextProvider({ children }) {
   const [cases, setCases] = useState([]);
 
   useEffect(() => {
-    api.get("organizations/fsk").then((response) => console.log(response.data));
+    api
+      .get("organizations/fsk")
+      .then((response) => setOrganization(response.data));
 
     api.get("cases").then((response) => setCases(response.data));
   }, []);
@@ -38,7 +40,11 @@ export function CaseContextProvider({ children }) {
 
   function handleCreateOrganization() {}
 
-  function handleCreateCase() {}
+  async function handleCreateCase(c: Case) {
+    const { data } = await api.post("cases", c);
+
+    setCases([...cases, data]);
+  }
 
   return (
     <CaseContext.Provider

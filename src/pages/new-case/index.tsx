@@ -1,5 +1,7 @@
+import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
 import { FormContainer } from "../../components/FormContainer";
+import { useCase } from "../../hooks/useCases";
 import { api } from "../../services/api";
 
 import styles from "./newcase.module.scss";
@@ -9,16 +11,22 @@ export default function NewCase() {
   const [description, setDescription] = useState("");
   const [value, setValue] = useState("");
 
+  const router = useRouter();
+  const { handleCreateCase, organization } = useCase();
+
   async function handleFormSubmit(e: FormEvent) {
     e.preventDefault();
 
-    const response = await api.post("cases", {
-      id: Math.random(),
+    const newCase = {
+      name: title,
       description,
       value,
-    });
+      organization_id: organization.id,
+    };
 
-    console.log(response.data);
+    handleCreateCase(newCase);
+
+    router.back();
   }
   return (
     <FormContainer
