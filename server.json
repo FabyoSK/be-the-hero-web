@@ -1,19 +1,58 @@
 {
-  "case": [
+  "cases": [
     {
       "name": "Cadelinha atropelada",
       "description": "A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas.",
       "value": "120"
     }
   ],
-  "organization": {
-    "id": 1,
-    "name": "FSK organization",
-    "email": "help@fsk.org",
-    "whatsapp": 9123456,
-    "address": {
-      "city": "Praia",
-      "ul": "PRA"
+  "organizations": [
+    {
+      "name": "fSa",
+      "email": "asa",
+      "whatsApp": "saa",
+      "city": "ass",
+      "uf": ""
+    },
+    {
+      "id": 1,
+      "name": "FSK",
+      "email": "asf",
+      "whatsApp": "2131231",
+      "city": "sad",
+      "uf": ""
+    },
+    {
+      "id": 0.6826204742636517,
+      "name": "FSK",
+      "email": "asf",
+      "whatsApp": "2131231",
+      "city": "sad",
+      "uf": "ss"
+    },
+    {
+      "id": 0.6916990148532185,
+      "name": "FSK",
+      "email": "asf",
+      "whatsApp": "2131231",
+      "city": "sad",
+      "uf": "ss"
+    },
+    {
+      "id": 0.4718436482829269,
+      "name": "FSK",
+      "email": "asf",
+      "whatsApp": "2131231",
+      "city": "sad",
+      "uf": "ss"
+    },
+    {
+      "id": 0.018041467890102858,
+      "name": "FSK",
+      "email": "asf",
+      "whatsApp": "2131231",
+      "city": "sad",
+      "uf": "ss"
     }
-  }
+  ]
 }
