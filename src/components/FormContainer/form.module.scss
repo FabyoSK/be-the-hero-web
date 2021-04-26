@@ -76,3 +76,9 @@
     }
   }
 }
+@media (max-width: 720px) {
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
