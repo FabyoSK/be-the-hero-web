@@ -1,19 +1,21 @@
+import Link from "next/link";
+import { useCase } from "../../hooks/useCases";
 import styles from "./header.module.scss";
 
-interface HeaderProps {
-  organizationName: string;
-}
-export function Header({ organizationName }: HeaderProps) {
+export function Header() {
+  const { organization } = useCase();
   return (
     <div className={styles.header}>
       <div className={styles.logoContainer}>
-        <img src="./logo.png" alt="logo" />
-        <p>Bem vinda, {organizationName}</p>
+        <img src="/logo.png" alt="logo" />
+        <p>Bem vinda, {organization?.name ?? "ONG"}</p>
       </div>
       <div className={styles.buttons}>
-        <button className={styles.buttonAdd}>Cadastrar novo caso</button>
+        <Link href="/new-case">
+          <button className={styles.buttonAdd}>Cadastrar novo caso</button>
+        </Link>
         <button className={styles.buttonLogout}>
-          <img src="./power.png" alt="logout" />
+          <img src="/power.png" alt="logout" />
         </button>
       </div>
     </div>
