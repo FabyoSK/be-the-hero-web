@@ -1,15 +1,14 @@
 import { useState } from "react";
+import { useCase } from "../hooks/useCases";
 import { api } from "../services/api";
 import styles from "./home.module.scss";
 
 export default function Home() {
   const [id, setId] = useState("");
+  const { handleLogin } = useCase();
 
-  function handleLogin() {
-    api
-      .get(`organizations/${id}`)
-      .then((response) => console.log(response.data))
-      .catch((err) => console.log(err));
+  function onLogin() {
+    handleLogin(id);
   }
 
   return (
@@ -24,7 +23,7 @@ export default function Home() {
             value={id}
             onChange={(e) => setId(e.target.value)}
           />
-          <button onClick={handleLogin}>Entrar</button>
+          <button onClick={onLogin}>Entrar</button>
         </div>
       </div>
       <div className={styles.peopleContainer}>

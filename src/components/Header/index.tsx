@@ -4,6 +4,7 @@ import styles from "./header.module.scss";
 
 export function Header() {
   const { organization } = useCase();
+
   return (
     <div className={styles.header}>
       <div className={styles.logoContainer}>
@@ -14,9 +15,11 @@ export function Header() {
         <Link href="/new-case">
           <button className={styles.buttonAdd}>Cadastrar novo caso</button>
         </Link>
-        <button className={styles.buttonLogout}>
-          <img src="/power.png" alt="logout" />
-        </button>
+        <Link href="/">
+          <button className={styles.buttonLogout}>
+            <img src="/power.png" alt="logout" />
+          </button>
+        </Link>
       </div>
     </div>
   );

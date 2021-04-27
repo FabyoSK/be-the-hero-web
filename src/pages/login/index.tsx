@@ -5,6 +5,7 @@ import { FormContainer } from "../../components/FormContainer";
 import { api } from "../../services/api";
 
 import styles from "./login.module.scss";
+import { useCase } from "../../hooks/useCases";
 
 export default function Login() {
   const [name, setName] = useState("");
@@ -13,21 +14,21 @@ export default function Login() {
   const [city, setCity] = useState("");
   const [uf, setUf] = useState("");
 
-  const router = useRouter();
+  const { handleCreateOrganization } = useCase();
 
+  const router = useRouter();
   async function handleFormSubmit(e: FormEvent) {
     e.preventDefault();
 
-    const response = await api.post("organizations", {
-      id: Math.random(),
+    const newOrganization = {
       name,
       email,
       whatsApp,
       city,
       uf,
-    });
+    };
 
-    router.push(`/organization/${name}`);
+    handleCreateOrganization(newOrganization);
   }
   return (
     <FormContainer
