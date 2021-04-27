@@ -26,6 +26,10 @@ export default function NewCase() {
 
     handleCreateCase(newCase);
 
+    handleGoBack();
+  }
+
+  function handleGoBack() {
     router.back();
   }
   return (
@@ -34,7 +38,7 @@ export default function NewCase() {
       body="Descreva o caso detalhadamente para 
       encontrar um herói para resolver isso."
       backPage="home"
-      backPageURL="/list"
+      backPageURL="/organization"
     >
       <form onSubmit={handleFormSubmit}>
         <input
@@ -55,7 +59,7 @@ export default function NewCase() {
           onChange={(e) => setValue(e.target.value)}
         />
         <div className={styles.buttons}>
-          <button>Cancelar</button>
+          <button onClick={handleGoBack}>Cancelar</button>
           <button type="submit">Cadastrar</button>
         </div>
       </form>

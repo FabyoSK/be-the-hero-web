@@ -19,7 +19,7 @@
       width: 100%;
 
       margin: 1rem 0;
-
+      padding: 0 1.5rem;
       height: 3rem;
 
       border: 0;
@@ -28,7 +28,6 @@
       &::placeholder {
         color: var(--text-secondary);
         font-size: 1rem;
-        padding-left: 0.5rem;
       }
     }
 
@@ -42,6 +41,17 @@
       height: 3rem;
       width: 100%;
       border-radius: 0.25rem;
+    }
+  }
+  .singinContainer {
+    margin-top: 5rem;
+
+    button {
+      display: flex;
+      align-items: center;
+
+      background: transparent;
+      border: 0;
     }
   }
   .peopleContainer {

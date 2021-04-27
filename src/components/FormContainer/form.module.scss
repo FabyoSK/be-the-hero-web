@@ -37,7 +37,7 @@
     input,
     textarea {
       width: 100%;
-
+      padding: 0 1.5rem;
       margin: 0.25rem 0;
 
       height: 3rem;
@@ -49,7 +49,6 @@
         color: var(--text-secondary);
 
         font-size: 1rem;
-        padding: 1rem;
       }
     }
     textarea {

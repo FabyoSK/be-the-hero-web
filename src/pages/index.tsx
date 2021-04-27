@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import { useCase } from "../hooks/useCases";
 import { api } from "../services/api";
@@ -24,6 +25,14 @@ export default function Home() {
             onChange={(e) => setId(e.target.value)}
           />
           <button onClick={onLogin}>Entrar</button>
+        </div>
+        <div className={styles.singinContainer}>
+          <Link href="/login">
+            <button>
+              <img src="/login.png" alt="Login" />
+              <p>Não tenho cadastro</p>
+            </button>
+          </Link>
         </div>
       </div>
       <div className={styles.peopleContainer}>
