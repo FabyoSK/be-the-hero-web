@@ -5,14 +5,15 @@
       "description": "Ajude a salvar a cadelinha Jolie",
       "value": "120",
       "organization_id": "plgC3gt",
+      "organization_name": "FSK",
       "id": 1
     }
   ],
   "organizations": [
     {
       "id": "plgC3gt",
-      "name": "fsk",
-      "email": "help@fsk.org",
+      "name": "FSK",
+      "email": "fabioalves.contact0@gmail.com",
       "whatsApp": "123456789",
       "city": "Praia",
       "uf": "PR"

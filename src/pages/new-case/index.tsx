@@ -22,6 +22,7 @@ export default function NewCase() {
       description,
       value,
       organization_id: organization.id,
+      organization_name: organization.name,
     };
 
     handleCreateCase(newCase);
