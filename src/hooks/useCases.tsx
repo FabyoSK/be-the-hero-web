@@ -8,6 +8,7 @@ interface Case {
   description: string;
   value: string;
   organization_id: string;
+  organization_name: string;
 }
 type CaseInput = Omit<Case, "id">;
 interface Organization {
