@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { useState } from "react";
-import { useCase } from "../hooks/useCases";
-import { api } from "../services/api";
+import { useCause } from "../hooks/useCause";
+
 import styles from "./home.module.scss";
 
 export default function Home() {
   const [id, setId] = useState("");
-  const { handleLogin } = useCase();
+  const { handleLogin } = useCause();
 
   function onLogin() {
     handleLogin(id);

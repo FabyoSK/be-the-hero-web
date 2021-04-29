@@ -1,11 +1,11 @@
 import "../../styles/globals.scss";
-import { CaseContextProvider } from "../hooks/useCases";
+import { CauseContextProvider } from "../hooks/useCause";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <CaseContextProvider>
+    <CauseContextProvider>
       <Component {...pageProps} />
-    </CaseContextProvider>
+    </CauseContextProvider>
   );
 }
 

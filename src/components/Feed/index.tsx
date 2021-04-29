@@ -1,15 +1,15 @@
-import { useCase } from "../../hooks/useCases";
+import { useCause } from "../../hooks/useCause";
 import { Card } from "../Card";
 import styles from "./feed.module.scss";
 
 export function Feed() {
-  const { cases } = useCase();
+  const { causes } = useCause();
   return (
     <div>
       <h1>Casos cadastrados</h1>
       <div className={styles.cardContainer}>
-        {cases.map((c) => {
-          return <Card key={c.name} case={c} />;
+        {causes.map((cause) => {
+          return <Card key={cause.name} cause={cause} />;
         })}
       </div>
     </div>

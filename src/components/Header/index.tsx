@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { useCase } from "../../hooks/useCases";
+import { useCause } from "../../hooks/useCause";
 import styles from "./header.module.scss";
 
 export function Header() {
-  const { organization } = useCase();
+  const { organization } = useCause();
 
   return (
     <div className={styles.header}>

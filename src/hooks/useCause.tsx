@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { createContext, useContext, useEffect, useState } from "react";
 import { api } from "../services/api";
 
-interface Case {
+interface Cause {
   id: string;
   name: string;
   description: string;
@@ -10,7 +10,7 @@ interface Case {
   organization_id: string;
   organization_name: string;
 }
-type CaseInput = Omit<Case, "id">;
+type CauseInput = Omit<Cause, "id">;
 interface Organization {
   id: string;
   name: string;
@@ -20,19 +20,19 @@ interface Organization {
   uf: string;
 }
 type OrganizationInput = Omit<Organization, "id">;
-interface CaseContextProps {
+interface CauseContextProps {
   organization: Organization;
-  cases: Case[];
+  causes: Cause[];
   handleLogin: (id: string) => void;
   handleCreateOrganization: (organization: OrganizationInput) => void;
-  handleCreateCase: (c: CaseInput) => void;
-  handleDeleteCase: (id: string) => void;
+  handleCreateCause: (cause: CauseInput) => void;
+  handleDeleteCause: (id: string) => void;
 }
-export const CaseContext = createContext({} as CaseContextProps);
+export const CauseContext = createContext({} as CauseContextProps);
 
-export function CaseContextProvider({ children }) {
+export function CauseContextProvider({ children }) {
   const [organization, setOrganization] = useState();
-  const [cases, setCases] = useState([]);
+  const [causes, setCauses] = useState([]);
 
   const router = useRouter();
 
@@ -47,13 +47,13 @@ export function CaseContextProvider({ children }) {
 
     setOrganization(response.data[0]);
 
-    const casesResponse = await api.get<Case[]>("cases", {
+    const causesResponse = await api.get<Cause[]>("causes", {
       params: {
-        organization_id: response.data.id,
+        organization_id: response.data[0].id,
       },
     });
 
-    setCases(casesResponse.data);
+    setCauses(causesResponse.data);
 
     router.push(`/organization/`);
   }
@@ -63,37 +63,37 @@ export function CaseContextProvider({ children }) {
 
     setOrganization(response.data);
     console.log(response.data);
-
+    setCauses([]);
     router.push(`/organization/`);
   }
 
-  async function handleCreateCase(c: CaseInput) {
-    const { data } = await api.post("cases", c);
+  async function handleCreateCause(cause: CauseInput) {
+    const { data } = await api.post("causes", cause);
 
-    setCases([...cases, data]);
+    setCauses([...causes, data]);
   }
 
-  async function handleDeleteCase(id: string) {
-    const response = await api.delete(`cases/${id}`);
+  async function handleDeleteCause(id: string) {
+    const response = await api.delete(`causes/${id}`);
 
-    const filterCases = cases.filter((c) => c.id !== id);
-    setCases(filterCases);
+    const filterCauses = causes.filter((cause) => cause.id !== id);
+    setCauses(filterCauses);
   }
   return (
-    <CaseContext.Provider
+    <CauseContext.Provider
       value={{
         organization,
-        cases,
+        causes,
         handleLogin,
         handleCreateOrganization,
-        handleCreateCase,
-        handleDeleteCase,
+        handleCreateCause,
+        handleDeleteCause,
       }}
     >
       {children}
-    </CaseContext.Provider>
+    </CauseContext.Provider>
   );
 }
-export const useCase = () => {
-  return useContext(CaseContext);
+export const useCause = () => {
+  return useContext(CauseContext);
 };

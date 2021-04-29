@@ -1,10 +1,10 @@
-import { useCase } from "../../hooks/useCases";
+import { useCause } from "../../hooks/useCause";
 import { formatPrice } from "../../util/format";
 
 import styles from "./card.module.scss";
 
 interface CardProps {
-  case: {
+  cause: {
     id: string;
     name: string;
     description: string;
@@ -13,24 +13,24 @@ interface CardProps {
   };
 }
 export function Card(props: CardProps) {
-  const { handleDeleteCase } = useCase();
+  const { handleDeleteCause } = useCause();
 
   return (
     <div className={styles.card}>
-      <button type="button" onClick={() => handleDeleteCase(props.case.id)}>
+      <button type="button" onClick={() => handleDeleteCause(props.cause.id)}>
         <img src="/trash.png" alt="Deletar" />
       </button>
       <div className={styles.cardSection}>
         <h2>Caso:</h2>
-        <p>{props.case.name}</p>
+        <p>{props.cause.name}</p>
       </div>
       <div className={styles.cardSection}>
         <h2>Descrição:</h2>
-        <p>{props.case.description} </p>
+        <p>{props.cause.description} </p>
       </div>
       <div className={styles.cardSection}>
         <h2>Valor:</h2>
-        <p>{formatPrice(Number(props.case.value))}</p>
+        <p>{formatPrice(Number(props.cause.value))}</p>
       </div>
     </div>
   );

@@ -2,10 +2,9 @@ import { FormEvent, useState } from "react";
 import { useRouter } from "next/router";
 
 import { FormContainer } from "../../components/FormContainer";
-import { api } from "../../services/api";
 
 import styles from "./login.module.scss";
-import { useCase } from "../../hooks/useCases";
+import { useCause } from "../../hooks/useCause";
 
 export default function Login() {
   const [name, setName] = useState("");
@@ -14,7 +13,7 @@ export default function Login() {
   const [city, setCity] = useState("");
   const [uf, setUf] = useState("");
 
-  const { handleCreateOrganization } = useCase();
+  const { handleCreateOrganization } = useCause();
 
   const router = useRouter();
   async function handleFormSubmit(e: FormEvent) {
