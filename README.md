@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h4 align="center">
+<img src="./.github/logo3x.png" width="250px" /><br>
+ <b>Seja um verdadeiro Heroi!</b> 🦸‍♂️
+</h4>
+<p align="center">
+  <a href="https://rocketseat.com.br">
+    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-red">
+  </a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-red">
+</p>
 
-## Getting Started
+<br>
 
-First, run the development server:
+### :rocket: Tecnologias usadas
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Node.js](https://nodejs.org/en/)
+- [Expo](https://expo.io/)
+- [Express](https://expressjs.com/pt-br/)
+- [ExpressJs](https://expressjs.com/pt-br/)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [Axios](https://www.npmjs.com/package/axios)
+- [Cors](https://www.npmjs.com/package/cors)
+- [Eslint](https://www.npmjs.com/package/eslint)
+- [Jest](https://www.npmjs.com/package/jest)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### :muscle: Projeto
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<b>Be the Hero</b> é um projeto que visa ajudar, de maneira <b>financeira</b> uma instituição de caridade, ajudando a mesma se manter.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 🦸‍♂️ Qual a importância de ajudar uma ONG? <br>
 
-## Learn More
+As organizações não governamentais <b>(ONGs)</b> são entidades privadas da sociedade civil, sem fins lucrativos, cujo propósito é defender e promover uma causa. Essa causa pode ser virtualmente de qualquer tipo: <b>direitos humanos</b>, <b>direitos animais</b>, <b>direitos indígenas</b>, <b>gênero</b>, <b>luta contra o racismo</b>, <b>meio ambiente</b>, <b>questões urbanas</b>, <b>imigrantes</b>, entre muitos outros.
 
-To learn more about Next.js, take a look at the following resources:
+### :recycle: Como contribuir
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Fork esse repositório;
+- Crie uma branch com a sua feature: `git checkout -b my-feature`
+- Commit suas mudanças: `git commit -m 'feat: My new feature'`
+- Push a sua branch: `git push origin my-feature`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made with 💜 by <a href="https://github.com/FabyoSK" target="_blank">Fábio Alves</a>

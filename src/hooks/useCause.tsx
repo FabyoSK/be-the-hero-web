@@ -10,7 +10,9 @@ interface Cause {
   organization_id: string;
   organization_name: string;
 }
+
 type CauseInput = Omit<Cause, "id">;
+
 interface Organization {
   id: string;
   name: string;
@@ -19,7 +21,9 @@ interface Organization {
   city: string;
   uf: string;
 }
+
 type OrganizationInput = Omit<Organization, "id">;
+
 interface CauseContextProps {
   organization: Organization;
   causes: Cause[];
